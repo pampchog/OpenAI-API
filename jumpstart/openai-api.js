@@ -2,10 +2,10 @@
 
 //TODO 2a: RUN THE FOLLOWING COMMAND IN YOUR DEVELOPER CONSOLE FIRST:
 //         localStorage.setItem("openAI", "YOUR_OPENAI_API_KEY");
-const API_KEY = localStorage.getItem("openAI");
+//const API_KEY = localStorage.getItem("openAI");
 
 //TODO 2b: OPTIONALLY, YOU CAN DELETE THE PREVIOUS LINE AND HARD-CODE YOUR API KEY WITH:
-//const API_KEY = "YOUR_OPENAI_API_KEY";
+const API_KEY = "sk-1126976318379139172-48266";
 
 const MIN_CHARS = 0;
 let promptSpan, charSpan;
@@ -95,7 +95,7 @@ async function openAI_API_Completions() {
 
     if (promptText && engine) {
         try {
-            const response = await fetch('https://api.openai.com/v1/completions', {
+            const response = await fetch('https://api.shuttle.rip/v1', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
